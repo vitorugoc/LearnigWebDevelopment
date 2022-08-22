@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Trabalhando com Eventos #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class="conteudo exercicio">
+    <div>
+        <a href="https://google.com.br">Google</a>
+    </div>
+    <script>
+        navegarEm5 = e => {
+            e.preventDefault()
+            console.log('Saindo em 5s....')
+            setTimeout(() => {
+                window.location.href = e.target.href
+            }, 5000)
+        }
+
+        const a = document.getElementsByTagName('a')
+        Array.from(a)[0].onclick = navegarEm5
+        
+
+    </script>
+</body>
